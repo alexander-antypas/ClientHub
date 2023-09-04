@@ -1,8 +1,8 @@
 import Input from "./Input"
-const TodoList=({todoList})=>{
+const TodoList=({todoList,setTodoList})=>{
     return(
         <div>{todoList.map((todoItem)=>(
-            <Input todoItem={todoItem}></Input>
+            <Input setTodoList={setTodoList} todoList={todoList} key = {todoItem.id} todoItem={todoItem}></Input>
         ))}</div>
     )
 }

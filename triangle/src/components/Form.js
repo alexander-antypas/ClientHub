@@ -1,14 +1,15 @@
 import styles from '../style.module.css';
+import { v4 as uuidv4 } from 'uuid';
+
 const Form=({todo,setTodo,todoList,setTodoList})=>{
     const inputChange=(event)=>{
         setTodo(event.target.value)
-        console.log(todo)
     }
 
     const handleSubmit=(event)=>{
         event.preventDefault()
-        setTodoList([...todoList,{name:todo}])
-        console.log(todoList)
+        setTodoList([...todoList,{name:todo, id:uuidv4()}])
+        setTodo("")
     }
     return (
         <div className={styles.triangleForm}>
