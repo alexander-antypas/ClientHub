@@ -2,7 +2,7 @@ import styles from '../style.module.css';
 const Input=({todoItem,todoList, setTodoList})=>{
 
     const deleteTodo=()=>{
-        setTodoList(todoList.filter(item=>item.id !=todoItem.id))
+        setTodoList(todoList.filter(item=>item.id !==todoItem.id))
     }
 
     return(
