@@ -8,7 +8,11 @@ import Home from './Home';
 import About from './About';
 import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 import Mulesme from './Mulesme';
+
+
+
 function TriangleNavbar() {
+
   return (
     <>
       <Router>
@@ -25,7 +29,7 @@ function TriangleNavbar() {
               Triangle
             </Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
               <NavDropdown title="Tools" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/simplified">Simplified Triangle Method</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/analytical">Analytical Triangle Method</NavDropdown.Item>
@@ -34,10 +38,11 @@ function TriangleNavbar() {
               </NavDropdown>
               <Nav.Link as={Link} to="/about">About</Nav.Link>
             </Nav>
+            <div id="mode">{`${navigator.onLine ? "Online Mode" : "Offline Mode"}`}</div>
           </Container>
         </Navbar>
         <Routes>
-          <Route path="/home" element={<Home/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
           <Route path="/simplified" element={<SimplifiedMethod />}></Route>
           <Route path="/analytical" element={<AnalyticalMethod />}></Route>
           <Route path="/mulesme" element={<Mulesme />}></Route>
@@ -48,4 +53,6 @@ function TriangleNavbar() {
   );
 }
 
-export default TriangleNavbar;
+
+
+export default TriangleNavbar
