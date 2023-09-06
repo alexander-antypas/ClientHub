@@ -4,10 +4,10 @@ this.addEventListener("install",(event)=>{
         caches.open(cacheData).then((cache)=>{
             cache.addAll([
                 '/static/js/bundle.js',
-                '/triangle_image.jpg',
-                '/triangle_back.jpg',
+                '/triangle_image.png',
+                '/triangle_back.png',
                 '/favicon.ico',
-                '/static/media/triangle_back.9580890d2bc11dab70e7.jpg',
+                '/static/media/triangle_back.2b9862a7ed739e83ec63.png',
                 '/manifest.json',
                 '/simplified',
                 '/analytical',

@@ -1,6 +1,6 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Triangle App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "triangle_back.jpg",
-      "sizes": "5000x5000 2500x2500 1250x1250 625x625 30x30",
-      "type": "image/jpg"
+      "src": "triangle_back.png",
+      "sizes": "5000x5000 2500x2500 1250x1250 625x625 144x144 30x30",
+      "type": "image/png"
     },
     {
-      "src": "triangle_image.jpg",
-      "sizes": "78x78 30x30",
-      "type": "image/jpg"
+      "src": "triangle_image.png",
+      "sizes": "5000x5000 2500x2500 1250x1250 625x625 144x144 30x30",
+      "type": "image/png"
     }
   ],
   "start_url": ".",

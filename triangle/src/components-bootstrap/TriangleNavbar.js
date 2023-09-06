@@ -21,7 +21,7 @@ function TriangleNavbar() {
           <Navbar.Brand>
               <img
                 alt=""
-                src="/triangle_image.jpg"
+                src="/triangle_image.png"
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
