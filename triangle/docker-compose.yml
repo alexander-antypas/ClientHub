@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  react:
+    container_name: "REACT"
+    image: react:latest
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './triangle:/triangle'
+    ports:
+      - 3000:3000
+    command: npm start
