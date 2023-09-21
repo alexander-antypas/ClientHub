@@ -1,0 +1,11 @@
+.mainApp{
+    background-image: linear-gradient(
+        rgb(0,0,0,0.7),
+        rgb(0,0,0,0.7)
+    ),
+    url('../public/triangle_back.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: whitesmoke;
+}
