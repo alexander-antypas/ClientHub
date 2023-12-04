@@ -1,11 +1,14 @@
 import React from "react";
 import TriangleNavbar from "./components-bootstrap/TriangleNavbar";
 import styles from './style.module.css';
+
+import BottomBar from "./components-bootstrap/BottomBar";
 function App(){
   return(
     <div className="App">
       <div className={styles.mainApp}>
-        <TriangleNavbar></TriangleNavbar>
+        <TriangleNavbar/>
+        <BottomBar/>
       </div>
     </div>
   )
