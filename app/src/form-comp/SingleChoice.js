@@ -1,13 +1,19 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 
-function SingleChoice() {
-
+function SingleChoice({name, choices, onChange }) {
   return (
     <Form.Group className="mb-3">
-        <Form.Check type="radio" label="first radio" name="formHorizontalRadios" id="formHorizontalRadios1" />
-        <Form.Check type="radio" label="second radio" name="formHorizontalRadios" id="formHorizontalRadios2" />
-        <Form.Check type="radio" label="third radio" name="formHorizontalRadios" id="formHorizontalRadios3" />
+      {choices.map((choice, index) => (
+        <Form.Check
+          key={index}
+          type="radio"
+          label={choice}
+          name={choice}
+          id={`${name}${index}`}
+          onChange={onChange} // Call the onChange callback when the radio button is selected
+        />
+      ))}
     </Form.Group>
   );
 }

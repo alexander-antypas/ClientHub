@@ -10,6 +10,7 @@ this.addEventListener("install",(event)=>{
                 '/static/media/triangle_back.2b9862a7ed739e83ec63.png',
                 '/manifest.json',
                 '/about',
+                '/map',
                 '/'
             ])
         })

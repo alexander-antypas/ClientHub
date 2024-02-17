@@ -7,12 +7,12 @@
     url('../public/triangle_back.png');
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    color: whitesmoke;
+    height: 100%;
+    background-color: black;
 }
 /* USED IN BottomBar.js*/
 .footer {
-    position: fixed;
+    position:fixed;
     bottom: 0;
     width: 100%;
     padding: 10px; /* Adjust padding as needed */
@@ -26,7 +26,9 @@
   }
 /* USED IN LeftSideBar.js*/
 .closed {
-width: 80px;
-transition: width 0.3s ease-in-out;
+  width: 80px;
+  transition: width 0.3s ease-in-out;
 }
+/*USED IN MyMap*/
+#map { height: 180px; }
   

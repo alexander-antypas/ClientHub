@@ -1,10 +1,10 @@
 import Nav from 'react-bootstrap/Nav';
 import styles from '../style.module.css';
 
-function AlignmentExample() {
+function BottomBar() {
   return (
     <div className={styles.footer}>
-      <Nav className="justify-content-end" activeKey="/home">
+      <Nav activeKey="/home">
         <Nav.Item>
           <Nav.Link href="https://www.hua.gr/index.php/el/">HUA Website</Nav.Link>
         </Nav.Item>
@@ -16,4 +16,4 @@ function AlignmentExample() {
   );
 }
 
-export default AlignmentExample;
+export default BottomBar;
