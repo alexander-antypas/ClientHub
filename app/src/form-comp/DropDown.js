@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Form, Dropdown } from 'react-bootstrap';
 
-function DropDown() {
+function DropDown({options, defaultValue, onChange }) {
 
-  const dropdownOptions = ['Option_1', 'Option_2', 'Option_3'];
-  
-  const handleDropdownSelect = (selectedValue) => {
-    console.log('Selected Option:', selectedValue);
-  };
+  const [opValue, setOption] = useState(defaultValue);
+  const defaultValueRef = useRef(defaultValue);
+  // Get min and max values when their state changes
+  useEffect(() => {
+    onChange({ defaultValue: opValue});
+  }, [opValue, onChange]);
 
   return (
     <Form.Group>
-        <Dropdown onSelect={handleDropdownSelect}>
+        <Dropdown onSelect={(event) => {
+            setOption(event);
+            defaultValueRef.current = event;
+          }}>
         <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-            Select an Option
+            {defaultValue}
         </Dropdown.Toggle>
         <Dropdown.Menu>
-            {dropdownOptions.map((option) => (
+            {options.map((option) => (
             <Dropdown.Item key={option} eventKey={option}>
                 {option}
             </Dropdown.Item>

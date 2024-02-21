@@ -7,8 +7,8 @@
     url('../public/triangle_back.png');
     background-position: center;
     background-size: cover;
-    height: 100%;
-    background-color: black;
+    height: 100em;
+    background-color: white;
 }
 /* USED IN BottomBar.js*/
 .footer {
@@ -17,6 +17,7 @@
     width: 100%;
     padding: 10px; /* Adjust padding as needed */
     background-color: black;
+    z-index: 1000;
   }
   
 /* USED IN LeftSideBar.js*/
