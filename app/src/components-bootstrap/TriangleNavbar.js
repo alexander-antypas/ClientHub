@@ -23,8 +23,6 @@ function TriangleNavbar() {
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">Home</Nav.Link>
               <NavDropdown title="Tools" id="basic-nav-dropdown">
-                <Nav.Link as={Link} to="/map">Map</Nav.Link>
-                <NavDropdown.Divider />
                 <Nav.Link as={Link} to="/ahp">AHP</Nav.Link>
                 <Nav.Link as={Link} to="/spatial">Spatial Search</Nav.Link>
               </NavDropdown>
@@ -40,7 +38,6 @@ function TriangleNavbar() {
               <Route path="/about" element={<About />}></Route>
               <Route path="/ahp" element={<Ahp />}></Route>
               <Route path="/spatial" element={<Spatial />}></Route>
-              <Route path="/map" element={<MyMap />}></Route>
             </Routes>
           </div>
         </Stack>

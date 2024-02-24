@@ -26,7 +26,13 @@ function MapComponent({ vectorPoints }) {
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             {vectorPoints.map((point, index) => (
               <Marker key={index} position={point[0]} icon={customIcon(index)}>
-                <Popup>Elevation:{point[1][0]}<br /> County: {point[1][1]}</Popup>
+                <Popup>Elevation:{point[1][0]}
+                <br /> County: {point[1][1]}
+                <br /> Nearest River : {(point[1][2]/1000).toFixed(3)} km
+                <br /> Nearest Hospital: {(point[1][3]/1000).toFixed(3)} km
+                <br /> Nearest Airport: {(point[1][4]/1000).toFixed(3)} km
+                <br /> Nearest Port: {(point[1][5]/1000).toFixed(3)} km
+                <br /> Nearest Coast: {(point[1][6]/1000).toFixed(3)} km</Popup>
               </Marker>
             ))}
           </MapContainer>

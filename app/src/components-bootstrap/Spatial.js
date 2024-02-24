@@ -22,8 +22,13 @@ function Spatial() {
           const longitude = parseFloat(point.split(',')[2]);
           const elevation = parseFloat(point.split(',')[3]);
           const county = point.split(',')[4];
+          const river = point.split(',')[5];
+          const hospital = point.split(',')[6];
+          const airport = point.split(',')[7];
+          const port = point.split(',')[8];
+          const coast = point.split(',')[9];
           const thepoint = [latitude,longitude];
-          const info = [elevation,county]
+          const info = [elevation,county,river,hospital,airport,port,coast]
           return[thepoint, info];
         }).filter(point => point !== null);
       setVectorPoints(points)
