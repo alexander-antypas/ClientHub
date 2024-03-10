@@ -32,7 +32,6 @@ function Spatial() {
           return[thepoint, info];
         }).filter(point => point !== null);
       setVectorPoints(points)
-      //setResultData(points)
   } catch (error) {
       console.error('Error handling API response:', error);
       return [];
